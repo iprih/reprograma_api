@@ -1,0 +1,18 @@
+{
+  "name": "n1-meli-api-i",
+  "version": "1.0.0",
+  "description": "É um protocolo de comunicação que permite que aplicações web se comuniquem, troquem informações e dados. __É o mensageiro da web__.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
