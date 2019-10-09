@@ -1,0 +1,9 @@
+depois que criar o novo repositorio
+
+git init
+git status
+git add .
+git status
+git remote add origin https://github.com/iprih/reprograma_api.git
+git remote -v
+git push origin master
