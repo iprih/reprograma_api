@@ -18,7 +18,6 @@ exports.getById = (req, res) => {
 exports.getBooks = (req, res) => {
     const id = req.params.id
     const aluna = alunas.find(aluna => aluna.id == id)
-
     if(!aluna){
         res.send("nao localizada")
     }
@@ -28,6 +27,11 @@ exports.getBooks = (req, res) => {
     res.status(200).send(titulos)
 }
 
-
-//res.status(200).send(alunas.find(aluna => aluna.id == id
+exports.getSp = (req, res) => {
+    
+    const nasceuSp = alunas.filter(menina => menina.nasceuEmSp == "true")
+    const meninasSP = nasceuSp.map(aluna => aluna.nome)
+    
+    res.status(200).send(meninasSP)
+}
 
