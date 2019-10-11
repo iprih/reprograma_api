@@ -38,18 +38,14 @@ exports.getSp = (req, res) => {
 exports.getIdades = (req,res) => {
     const id = req.params.id
     const aluna = alunas.find(aluna => aluna.id == id)
-    const dataNasc = aluna.dateOfBirth.split('/')
+    const dataNasc = aluna.dateOfBirth.split('/') //arrData = dataNasc.slip('/')
     const anoDeNasc = dataNasc[2]
     const mesDeNasc = dataNasc[1]
     const diaDeNasc = dataNasc[0]
+    const idade = (calcularIdade(anoDeNasc,mesDeNasc,diaDeNasc))
     
-    
-    res.status(200).send({anoDeNasc})
-
+    res.status(200).send({idade})
 }
-
-
-
 
 function calcularIdade(anoDeNasc, mesDeNasc, diaDeNasc) {
       const now = new Date()
