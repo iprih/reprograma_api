@@ -5,6 +5,8 @@ exports.get = (req, res) => {
     res.status(200).send(alunas)
 }
 
+
+
 exports.getById = (req, res) => {
     const id = req.params.id
     if (id > 17 || id <= 0) {
