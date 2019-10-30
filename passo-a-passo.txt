@@ -6,4 +6,23 @@ git add .
 git status
 git remote add origin https://github.com/iprih/reprograma_api.git
 git remote -v
+git commit -m "ajaisaj"
 git push origin master
+
+
+// exports.get = (req, res) =>{
+//     const profSemCpf = professoras.map(item => {
+//     delete item.cpf
+//         return item
+//     })
+//     res.status(200).send(profSemCpf)}
+
+// exports.getById = (req, res) => {
+//     const id = req.params.id
+//     const professora = professoras.find(professora => professora.id == id)
+//     const profSemCpf = professora.map(item => {
+//         delete item.cpf
+//         return item
+//     })
+//     res.status(200).send(profSemCpf)
+// }

@@ -14,5 +14,13 @@
     "start": "nodemon ./server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iprih/reprograma_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iprih/reprograma_api/issues"
+  },
+  "homepage": "https://github.com/iprih/reprograma_api#readme"
 }

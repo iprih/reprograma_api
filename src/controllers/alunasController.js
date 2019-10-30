@@ -15,6 +15,7 @@ exports.getById = (req, res) => {
     res.status(200).send(alunas.find(aluna => aluna.id == id))
 }
 
+
 exports.getBooks = (req, res) => {
     const id = req.params.id
     const aluna = alunas.find(aluna => aluna.id == id)
@@ -61,6 +62,8 @@ function calcularIdade(anoDeNasc, mesDeNasc, diaDeNasc) {
       return idade
     }
 
+
+    
 
 
 
