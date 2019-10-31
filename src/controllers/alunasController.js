@@ -83,18 +83,18 @@ exports.post = (req, res) => {
 exports.postBooks = (req, res) => {
     const id = req.params.id
     const aluna = alunas.find(aluna => aluna.id == id)
-    if (aluna){
+    if (!aluna){
         res.send("nao encontrei essa garota")
     }
-    const {titulo, leu} = req.body;
-    aluna[aluna.id -1].livros.push({titulo, leu});
+    const { titulo, leu } = req.body;
+    alunas[aluna.id -1].livros.push({ titulo, leu });
     fs.writeFile("./src/model/alunas.json", JSON.stringify(alunas), 'utf8', function(err){
         if(err){
-            return res.status(500).send({message: err});
+            return res.status(500).send({ message: err });
         }
         console.log("The file was saved!");
     });
-    res.status(201).send(alunas[aluna.id -1].livros);
+    return res.status(201).send(alunas[aluna.id -1].livros);
 
 }
 
