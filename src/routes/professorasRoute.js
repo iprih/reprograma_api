@@ -6,4 +6,7 @@ router.get("/", controller.get)
 router.get("/:id", controller.getById)
 // router.get("/SemCpf", controller.getSemCpf)
 
+router.post("/", controller.post)
+
+
 module.exports = router
